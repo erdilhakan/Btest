@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="BstbAsansorDenetimServis"
+	targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+	xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<wsp:Policy wsu:Id="BasicHttpBinding_IBstbAsansorDenetimServis_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false" />
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256 />
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax />
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp />
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<sp:SignedSupportingTokens
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:UsernameToken
+							sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+							<wsp:Policy>
+								<sp:WssUsernameToken10 />
+							</wsp:Policy>
+						</sp:UsernameToken>
+					</wsp:Policy>
+				</sp:SignedSupportingTokens>
+				<sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy />
+				</sp:Wss10>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://tempuri.org/Imports">
+			<xsd:import
+				schemaLocation="IBstbAsansorDenetimServis.svc.xsd0.xsd"
+				namespace="http://tempuri.org/" />
+			<xsd:import
+				schemaLocation="IBstbAsansorDenetimServis.svc.xsd4.xsd"
+				namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+			<xsd:import
+				schemaLocation="IBstbAsansorDenetimServis.svc.xsd1.xsd"
+				namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+			<xsd:import
+				schemaLocation="IBstbAsansorDenetimServis.svc.xsd2.xsd"
+				namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			<xsd:import
+				schemaLocation="IBstbAsansorDenetimServis.svc.xsd3.xsd"
+				namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="IBstbAsansorDenetimServis_BinaAsansorKayit_InputMessage">
+		<wsdl:part name="parameters" element="tns:BinaAsansorKayit" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BinaAsansorKayit_OutputMessage">
+		<wsdl:part name="parameters" element="tns:BinaAsansorKayitResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BinaAsansorKayit_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:ServiceException"
+			xmlns:q1="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorKimlikKodSorgula" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorKimlikKodSorgulaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:ServiceException"
+			xmlns:q2="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorKimlikKodCsbmSorgula" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorKimlikKodCsbmSorgulaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:ServiceException"
+			xmlns:q3="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayit_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayit" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayit_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayit_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q4:ServiceException"
+			xmlns:q4="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitGuncelle" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitGuncelleResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q5:ServiceException"
+			xmlns:q5="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitSilme" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitSilmeResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q6:ServiceException"
+			xmlns:q6="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitSorgula" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_OutputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitSorgulaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q7:ServiceException"
+			xmlns:q7="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_InputMessage">
+		<wsdl:part name="parameters"
+			element="tns:AsansorDenetimKayitAsansorEtiketIleSorgula" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:AsansorDenetimKayitAsansorEtiketIleSorgulaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q8:ServiceException"
+			xmlns:q8="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_InputMessage">
+		<wsdl:part name="parameters" element="tns:AsansorDenetimKayitListesiSorgula" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:AsansorDenetimKayitListesiSorgulaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q9:ServiceException"
+			xmlns:q9="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansAsansorTanimListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansAsansorTanimListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q10:ServiceException"
+			xmlns:q10="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansCihazTipiListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansCihazTipiListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q11:ServiceException"
+			xmlns:q11="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_InputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimKayitKontrolSorularListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimKayitKontrolSorularListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q12:ServiceException"
+			xmlns:q12="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_InputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimKayitKontrolSorulariAsansorTuruneGore" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimKayitKontrolSorulariAsansorTuruneGoreResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q13:ServiceException"
+			xmlns:q13="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansFirmaYapiListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansFirmaYapiListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q14:ServiceException"
+			xmlns:q14="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansTseStandardListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansTseStandardListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q15:ServiceException"
+			xmlns:q15="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansSoruSkalaListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansSoruSkalaListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q16:ServiceException"
+			xmlns:q16="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansYapininSinifiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansYapininSinifiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q17:ServiceException"
+			xmlns:q17="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_InputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansAsansorSoruDegerlendirmeListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansAsansorSoruDegerlendirmeListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q18:ServiceException"
+			xmlns:q18="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_InputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimSorularEslestirmeListesiGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_OutputMessage">
+		<wsdl:part name="parameters"
+			element="tns:ReferansDenetimSorularEslestirmeListesiGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q19:ServiceException"
+			xmlns:q19="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:IleGoreBelediyeSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:IleGoreBelediyeSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q20:ServiceException"
+			xmlns:q20="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansBelediyeTuruGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansBelediyeTuruGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q21:ServiceException"
+			xmlns:q21="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansKritiklikSeviyeGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansKritiklikSeviyeGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q22:ServiceException"
+			xmlns:q22="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansDenetimDurumGetir" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReferansDenetimDurumGetirResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q23:ServiceException"
+			xmlns:q23="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:CsbmBagliBinaSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:CsbmBagliBinaSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q24:ServiceException"
+			xmlns:q24="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:IlceyeBagliMahalleSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:IlceyeBagliMahalleSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q25:ServiceException"
+			xmlns:q25="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleBagliIlceSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:IleBagliIlceSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleBagliIlceSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:IleBagliIlceSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IleBagliIlceSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q26:ServiceException"
+			xmlns:q26="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:MahalleyeBagliCsbmSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:MahalleyeBagliCsbmSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q27:ServiceException"
+			xmlns:q27="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_TumIlleriSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:TumIlleriSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_TumIlleriSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:TumIlleriSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_TumIlleriSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q28:ServiceException"
+			xmlns:q28="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:IlceyeBagliBucakSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:IlceyeBagliBucakSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q29:ServiceException"
+			xmlns:q29="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:BucagaBagliKoySorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:BucagaBagliKoySorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q30:ServiceException"
+			xmlns:q30="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:KoyeBagliMahalleSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:KoyeBagliMahalleSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q31:ServiceException"
+			xmlns:q31="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceBelediyeSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:IlceBelediyeSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceBelediyeSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:IlceBelediyeSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_IlceBelediyeSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q32:ServiceException"
+			xmlns:q32="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_InputMessage">
+		<wsdl:part name="parameters" element="tns:BinaKoduIleBinaSorgulama" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_OutputMessage">
+		<wsdl:part name="parameters" element="tns:BinaKoduIleBinaSorgulamaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_ServiceExceptionFault_FaultMessage">
+		<wsdl:part name="detail" element="q33:ServiceException"
+			xmlns:q33="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.FaultContracts" />
+	</wsdl:message>
+	<wsdl:portType msc:usingSession="false"
+		name="IBstbAsansorDenetimServis">
+		<wsdl:operation name="BinaAsansorKayit">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaAsansorKayit"
+				message="tns:IBstbAsansorDenetimServis_BinaAsansorKayit_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaAsansorKayitResponse"
+				message="tns:IBstbAsansorDenetimServis_BinaAsansorKayit_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaAsansorKayitServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_BinaAsansorKayit_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorKimlikKodSorgula">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodSorgula"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodSorgulaResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodSorgulaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodSorgula_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorKimlikKodCsbmSorgula">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodCsbmSorgula"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodCsbmSorgulaResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodCsbmSorgulaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorKimlikKodCsbmSorgula_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayit">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayit"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayit_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayit_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayit_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitGuncelle">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitGuncelle"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitGuncelleResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitGuncelleServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitGuncelle_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitSilme">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSilme"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSilmeResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSilmeServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSilme_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitSorgula">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSorgula"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSorgulaResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSorgulaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitSorgula_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitAsansorEtiketIleSorgula">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitAsansorEtiketIleSorgula"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitAsansorEtiketIleSorgulaResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitAsansorEtiketIleSorgulaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitAsansorEtiketIleSorgula_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitListesiSorgula">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitListesiSorgula"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitListesiSorgulaResponse"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitListesiSorgulaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_AsansorDenetimKayitListesiSorgula_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansAsansorTanimListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorTanimListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorTanimListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorTanimListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorTanimListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansCihazTipiListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansCihazTipiListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansCihazTipiListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansCihazTipiListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansCihazTipiListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimKayitKontrolSorularListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorularListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorularListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorularListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorularListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimKayitKontrolSorulariAsansorTuruneGore">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorulariAsansorTuruneGore"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorulariAsansorTuruneGoreResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorulariAsansorTuruneGoreServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimKayitKontrolSorulariAsansorTuruneGore_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansFirmaYapiListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansFirmaYapiListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansFirmaYapiListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansFirmaYapiListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansFirmaYapiListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansTseStandardListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansTseStandardListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansTseStandardListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansTseStandardListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansTseStandardListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansSoruSkalaListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansSoruSkalaListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansSoruSkalaListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansSoruSkalaListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansSoruSkalaListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansYapininSinifiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansYapininSinifiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansYapininSinifiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansYapininSinifiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansYapininSinifiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansAsansorSoruDegerlendirmeListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorSoruDegerlendirmeListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorSoruDegerlendirmeListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorSoruDegerlendirmeListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansAsansorSoruDegerlendirmeListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimSorularEslestirmeListesiGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimSorularEslestirmeListesiGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimSorularEslestirmeListesiGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimSorularEslestirmeListesiGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimSorularEslestirmeListesiGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="IleGoreBelediyeSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleGoreBelediyeSorgulama"
+				message="tns:IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleGoreBelediyeSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleGoreBelediyeSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_IleGoreBelediyeSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansBelediyeTuruGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansBelediyeTuruGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansBelediyeTuruGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansBelediyeTuruGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansBelediyeTuruGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansKritiklikSeviyeGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansKritiklikSeviyeGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansKritiklikSeviyeGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansKritiklikSeviyeGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansKritiklikSeviyeGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimDurumGetir">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimDurumGetir"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimDurumGetirResponse"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimDurumGetirServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_ReferansDenetimDurumGetir_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="CsbmBagliBinaSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/CsbmBagliBinaSorgulama"
+				message="tns:IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/CsbmBagliBinaSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/CsbmBagliBinaSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_CsbmBagliBinaSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="IlceyeBagliMahalleSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliMahalleSorgulama"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliMahalleSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliMahalleSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliMahalleSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="IleBagliIlceSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleBagliIlceSorgulama"
+				message="tns:IBstbAsansorDenetimServis_IleBagliIlceSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleBagliIlceSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_IleBagliIlceSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IleBagliIlceSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_IleBagliIlceSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="MahalleyeBagliCsbmSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/MahalleyeBagliCsbmSorgulama"
+				message="tns:IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/MahalleyeBagliCsbmSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/MahalleyeBagliCsbmSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_MahalleyeBagliCsbmSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="TumIlleriSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/TumIlleriSorgulama"
+				message="tns:IBstbAsansorDenetimServis_TumIlleriSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/TumIlleriSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_TumIlleriSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/TumIlleriSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_TumIlleriSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="IlceyeBagliBucakSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliBucakSorgulama"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliBucakSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliBucakSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_IlceyeBagliBucakSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="BucagaBagliKoySorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BucagaBagliKoySorgulama"
+				message="tns:IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BucagaBagliKoySorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BucagaBagliKoySorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_BucagaBagliKoySorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="KoyeBagliMahalleSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/KoyeBagliMahalleSorgulama"
+				message="tns:IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/KoyeBagliMahalleSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/KoyeBagliMahalleSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_KoyeBagliMahalleSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="IlceBelediyeSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceBelediyeSorgulama"
+				message="tns:IBstbAsansorDenetimServis_IlceBelediyeSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceBelediyeSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_IlceBelediyeSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/IlceBelediyeSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_IlceBelediyeSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="BinaKoduIleBinaSorgulama">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaKoduIleBinaSorgulama"
+				message="tns:IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaKoduIleBinaSorgulamaResponse"
+				message="tns:IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IBstbAsansorDenetimServis/BinaKoduIleBinaSorgulamaServiceExceptionFault"
+				name="ServiceExceptionFault"
+				message="tns:IBstbAsansorDenetimServis_BinaKoduIleBinaSorgulama_ServiceExceptionFault_FaultMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_IBstbAsansorDenetimServis"
+		type="tns:IBstbAsansorDenetimServis">
+		<wsp:PolicyReference
+			URI="#BasicHttpBinding_IBstbAsansorDenetimServis_policy" />
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="BinaAsansorKayit">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/BinaAsansorKayit"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorKimlikKodSorgula">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodSorgula"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorKimlikKodCsbmSorgula">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorKimlikKodCsbmSorgula"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayit">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayit"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitGuncelle">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitGuncelle"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitSilme">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSilme"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitSorgula">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitSorgula"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitAsansorEtiketIleSorgula">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitAsansorEtiketIleSorgula"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AsansorDenetimKayitListesiSorgula">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/AsansorDenetimKayitListesiSorgula"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansAsansorTanimListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorTanimListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansCihazTipiListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansCihazTipiListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimKayitKontrolSorularListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorularListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimKayitKontrolSorulariAsansorTuruneGore">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimKayitKontrolSorulariAsansorTuruneGore"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansFirmaYapiListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansFirmaYapiListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansTseStandardListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansTseStandardListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansSoruSkalaListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansSoruSkalaListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansYapininSinifiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansYapininSinifiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansAsansorSoruDegerlendirmeListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansAsansorSoruDegerlendirmeListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimSorularEslestirmeListesiGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimSorularEslestirmeListesiGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="IleGoreBelediyeSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/IleGoreBelediyeSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansBelediyeTuruGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansBelediyeTuruGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansKritiklikSeviyeGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansKritiklikSeviyeGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReferansDenetimDurumGetir">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/ReferansDenetimDurumGetir"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="CsbmBagliBinaSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/CsbmBagliBinaSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="IlceyeBagliMahalleSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliMahalleSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="IleBagliIlceSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/IleBagliIlceSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="MahalleyeBagliCsbmSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/MahalleyeBagliCsbmSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="TumIlleriSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/TumIlleriSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="IlceyeBagliBucakSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/IlceyeBagliBucakSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="BucagaBagliKoySorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/BucagaBagliKoySorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="KoyeBagliMahalleSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/KoyeBagliMahalleSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="IlceBelediyeSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/IlceBelediyeSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="BinaKoduIleBinaSorgulama">
+			<soap:operation
+				soapAction="http://tempuri.org/IBstbAsansorDenetimServis/BinaKoduIleBinaSorgulama"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceExceptionFault">
+				<soap:fault name="ServiceExceptionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="BstbAsansorDenetimServis">
+		<wsdl:port name="BasicHttpBinding_IBstbAsansorDenetimServis"
+			binding="tns:BasicHttpBinding_IBstbAsansorDenetimServis">
+			<soap:address
+				location="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

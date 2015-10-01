@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts">
+	<xs:import
+		schemaLocation="IBstbAsansorDenetimServis.svc.xsd3.xsd"
+		namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+	<xs:complexType name="ServisSonucOfAsansorKimlikKodlar8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="AsansorKimlikKodlar"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q1:AsansorKimlikKodlar"
+						xmlns:q1="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfAsansorKimlikKodlar8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfAsansorKimlikKodlar8Zb117hL" />
+	<xs:complexType name="ServisSonuc">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Hata" type="xs:boolean" />
+			<xs:element minOccurs="0" name="HataKodu" type="xs:int" />
+			<xs:element minOccurs="0" name="Mesaj" nillable="true"
+				type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ServisSonuc" nillable="true" type="tns:ServisSonuc" />
+	<xs:complexType name="ServisSonucOfArrayOfAsansorKimlikKodlar8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfAsansorKimlikKodlar"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q2:ArrayOfAsansorKimlikKodlar"
+						xmlns:q2="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfAsansorKimlikKodlar8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfAsansorKimlikKodlar8Zb117hL" />
+	<xs:complexType name="ServisSonucOfDenetimKayitSonuc8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="DenetimKayitSonuc"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q3:DenetimKayitSonuc"
+						xmlns:q3="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfDenetimKayitSonuc8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfDenetimKayitSonuc8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfDenetimKayit8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfDenetimKayit"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q4:ArrayOfDenetimKayit"
+						xmlns:q4="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfDenetimKayit8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfDenetimKayit8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansAsansorTanim8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansAsansorTanim"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q5:ArrayOfReferansAsansorTanim"
+						xmlns:q5="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansAsansorTanim8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansAsansorTanim8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansCihazTipi8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansCihazTipi"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q6:ArrayOfReferansCihazTipi"
+						xmlns:q6="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansCihazTipi8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansCihazTipi8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansKontrolSorular8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansKontrolSorular"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q7:ArrayOfReferansKontrolSorular"
+						xmlns:q7="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansKontrolSorular8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansKontrolSorular8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansFirmaYapi8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansFirmaYapi"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q8:ArrayOfReferansFirmaYapi"
+						xmlns:q8="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansFirmaYapi8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansFirmaYapi8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansTseStandard8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansTseStandard"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q9:ArrayOfReferansTseStandard"
+						xmlns:q9="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansTseStandard8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansTseStandard8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansSoruSkala8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansSoruSkala"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q10:ArrayOfReferansSoruSkala"
+						xmlns:q10="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansSoruSkala8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansSoruSkala8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansYapininSinifi8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansYapininSinifi"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q11:ArrayOfReferansYapininSinifi"
+						xmlns:q11="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansYapininSinifi8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansYapininSinifi8Zb117hL" />
+	<xs:complexType
+		name="ServisSonucOfArrayOfReferansAsansorSoruDegerlendirme8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansAsansorSoruDegerlendirme"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q12:ArrayOfReferansAsansorSoruDegerlendirme"
+						xmlns:q12="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element
+		name="ServisSonucOfArrayOfReferansAsansorSoruDegerlendirme8Zb117hL"
+		nillable="true"
+		type="tns:ServisSonucOfArrayOfReferansAsansorSoruDegerlendirme8Zb117hL" />
+	<xs:complexType
+		name="ServisSonucOfArrayOfReferansDenetimSorularEslestirme8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansDenetimSorularEslestirme"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q13:ArrayOfReferansDenetimSorularEslestirme"
+						xmlns:q13="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element
+		name="ServisSonucOfArrayOfReferansDenetimSorularEslestirme8Zb117hL"
+		nillable="true"
+		type="tns:ServisSonucOfArrayOfReferansDenetimSorularEslestirme8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfBelediye8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfBelediye"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q14:ArrayOfBelediye"
+						xmlns:q14="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfBelediye8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfBelediye8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfBelediyeTur8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfBelediyeTur"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q15:ArrayOfBelediyeTur"
+						xmlns:q15="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfBelediyeTur8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfBelediyeTur8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansKritiklikSeviye8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansKritiklikSeviye"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q16:ArrayOfReferansKritiklikSeviye"
+						xmlns:q16="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansKritiklikSeviye8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansKritiklikSeviye8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfReferansDenetimDurum8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfReferansDenetimDurum"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q17:ArrayOfReferansDenetimDurum"
+						xmlns:q17="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfReferansDenetimDurum8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfReferansDenetimDurum8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfBina8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfBina"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q18:ArrayOfBina"
+						xmlns:q18="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfBina8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfBina8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfMahalle8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfMahalle"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q19:ArrayOfMahalle"
+						xmlns:q19="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfMahalle8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfMahalle8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfIlce8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfIlce"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q20:ArrayOfIlce"
+						xmlns:q20="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfIlce8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfIlce8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfCsbm8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfCsbm"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q21:ArrayOfCsbm"
+						xmlns:q21="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfCsbm8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfCsbm8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfIl8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfIl"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q22:ArrayOfIl"
+						xmlns:q22="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfIl8Zb117hL" nillable="true"
+		type="tns:ServisSonucOfArrayOfIl8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfBucak8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfBucak"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q23:ArrayOfBucak"
+						xmlns:q23="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfBucak8Zb117hL"
+		nillable="true" type="tns:ServisSonucOfArrayOfBucak8Zb117hL" />
+	<xs:complexType name="ServisSonucOfArrayOfKoy8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ArrayOfKoy"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q24:ArrayOfKoy"
+						xmlns:q24="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfArrayOfKoy8Zb117hL" nillable="true"
+		type="tns:ServisSonucOfArrayOfKoy8Zb117hL" />
+	<xs:complexType name="ServisSonucOfBelediye8Zb117hL">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="ServisSonucOf{0}{#}"
+					Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="Belediye"
+						Namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:ServisSonuc">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Sonuc" nillable="true"
+						type="q25:Belediye"
+						xmlns:q25="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ServisSonucOfBelediye8Zb117hL" nillable="true"
+		type="tns:ServisSonucOfBelediye8Zb117hL" />
+</xs:schema>

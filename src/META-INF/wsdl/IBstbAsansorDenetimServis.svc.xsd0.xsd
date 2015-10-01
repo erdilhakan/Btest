@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+	<xs:import
+		schemaLocation="IBstbAsansorDenetimServis.svc.xsd2.xsd"
+		namespace="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+	<xs:import
+		schemaLocation="IBstbAsansorDenetimServis.svc.xsd3.xsd"
+		namespace="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+	<xs:element name="BinaAsansorKayit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="binaKod" type="xs:int" />
+				<xs:element minOccurs="0" name="AsansorSiraNo" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaAsansorKayitResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="BinaAsansorKayitResult"
+					nillable="true" type="q1:ServisSonucOfAsansorKimlikKodlar8Zb117hL"
+					xmlns:q1="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorKimlikKodSorgula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="binaKod" type="xs:int" />
+				<xs:element minOccurs="0" name="asansorSiraNo" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorKimlikKodSorgulaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorKimlikKodSorgulaResult"
+					nillable="true" type="q2:ServisSonucOfAsansorKimlikKodlar8Zb117hL"
+					xmlns:q2="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorKimlikKodCsbmSorgula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="csbmKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorKimlikKodCsbmSorgulaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorKimlikKodCsbmSorgulaResult"
+					nillable="true" type="q3:ServisSonucOfArrayOfAsansorKimlikKodlar8Zb117hL"
+					xmlns:q3="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="denetimKayit" nillable="true"
+					type="q4:DenetimKayit"
+					xmlns:q4="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorDenetimKayitResult"
+					nillable="true" type="q5:ServisSonucOfDenetimKayitSonuc8Zb117hL"
+					xmlns:q5="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitGuncelle">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="denetimKayit" nillable="true"
+					type="q6:DenetimKayit"
+					xmlns:q6="http://schemas.datacontract.org/2004/07/BSTBNET.IcUygulamalar.Server.Contracts.DataContracts.AsansorDenetim" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitGuncelleResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorDenetimKayitGuncelleResult"
+					nillable="true" type="q7:ServisSonucOfDenetimKayitSonuc8Zb117hL"
+					xmlns:q7="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitSilme">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="denetimKayitId" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitSilmeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorDenetimKayitSilmeResult"
+					nillable="true" type="q8:ServisSonuc"
+					xmlns:q8="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitSorgula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="basvuruNo" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitSorgulaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="AsansorDenetimKayitSorgulaResult"
+					nillable="true" type="q9:ServisSonucOfArrayOfDenetimKayit8Zb117hL"
+					xmlns:q9="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitAsansorEtiketIleSorgula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="asansorEtiket" nillable="true"
+					type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitAsansorEtiketIleSorgulaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="AsansorDenetimKayitAsansorEtiketIleSorgulaResult" nillable="true"
+					type="q10:ServisSonucOfArrayOfDenetimKayit8Zb117hL"
+					xmlns:q10="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitListesiSorgula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="denetimKayitBaslangicTarihi"
+					type="xs:dateTime" />
+				<xs:element minOccurs="0" name="denetimKayitBitisTarihi"
+					type="xs:dateTime" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsansorDenetimKayitListesiSorgulaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="AsansorDenetimKayitListesiSorgulaResult" nillable="true"
+					type="q11:ServisSonucOfArrayOfDenetimKayit8Zb117hL"
+					xmlns:q11="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansAsansorTanimListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansAsansorTanimListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansAsansorTanimListesiGetirResult" nillable="true"
+					type="q12:ServisSonucOfArrayOfReferansAsansorTanim8Zb117hL"
+					xmlns:q12="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansCihazTipiListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansCihazTipiListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansCihazTipiListesiGetirResult" nillable="true"
+					type="q13:ServisSonucOfArrayOfReferansCihazTipi8Zb117hL"
+					xmlns:q13="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimKayitKontrolSorularListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimKayitKontrolSorularListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansDenetimKayitKontrolSorularListesiGetirResult"
+					nillable="true" type="q14:ServisSonucOfArrayOfReferansKontrolSorular8Zb117hL"
+					xmlns:q14="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimKayitKontrolSorulariAsansorTuruneGore">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="asansorTuru" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element
+		name="ReferansDenetimKayitKontrolSorulariAsansorTuruneGoreResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansDenetimKayitKontrolSorulariAsansorTuruneGoreResult"
+					nillable="true" type="q15:ServisSonucOfArrayOfReferansKontrolSorular8Zb117hL"
+					xmlns:q15="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansFirmaYapiListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansFirmaYapiListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansFirmaYapiListesiGetirResult" nillable="true"
+					type="q16:ServisSonucOfArrayOfReferansFirmaYapi8Zb117hL"
+					xmlns:q16="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansTseStandardListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansTseStandardListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansTseStandardListesiGetirResult" nillable="true"
+					type="q17:ServisSonucOfArrayOfReferansTseStandard8Zb117hL"
+					xmlns:q17="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansSoruSkalaListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansSoruSkalaListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansSoruSkalaListesiGetirResult" nillable="true"
+					type="q18:ServisSonucOfArrayOfReferansSoruSkala8Zb117hL"
+					xmlns:q18="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansYapininSinifiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansYapininSinifiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ReferansYapininSinifiGetirResult"
+					nillable="true" type="q19:ServisSonucOfArrayOfReferansYapininSinifi8Zb117hL"
+					xmlns:q19="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansAsansorSoruDegerlendirmeListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansAsansorSoruDegerlendirmeListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansAsansorSoruDegerlendirmeListesiGetirResult" nillable="true"
+					type="q20:ServisSonucOfArrayOfReferansAsansorSoruDegerlendirme8Zb117hL"
+					xmlns:q20="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimSorularEslestirmeListesiGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimSorularEslestirmeListesiGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansDenetimSorularEslestirmeListesiGetirResult" nillable="true"
+					type="q21:ServisSonucOfArrayOfReferansDenetimSorularEslestirme8Zb117hL"
+					xmlns:q21="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IleGoreBelediyeSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ilKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IleGoreBelediyeSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IleGoreBelediyeSorgulamaResult"
+					nillable="true" type="q22:ServisSonucOfArrayOfBelediye8Zb117hL"
+					xmlns:q22="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansBelediyeTuruGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansBelediyeTuruGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ReferansBelediyeTuruGetirResult"
+					nillable="true" type="q23:ServisSonucOfArrayOfBelediyeTur8Zb117hL"
+					xmlns:q23="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansKritiklikSeviyeGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansKritiklikSeviyeGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0"
+					name="ReferansKritiklikSeviyeGetirResult" nillable="true"
+					type="q24:ServisSonucOfArrayOfReferansKritiklikSeviye8Zb117hL"
+					xmlns:q24="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimDurumGetir">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReferansDenetimDurumGetirResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ReferansDenetimDurumGetirResult"
+					nillable="true" type="q25:ServisSonucOfArrayOfReferansDenetimDurum8Zb117hL"
+					xmlns:q25="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CsbmBagliBinaSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="csbmKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CsbmBagliBinaSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="CsbmBagliBinaSorgulamaResult"
+					nillable="true" type="q26:ServisSonucOfArrayOfBina8Zb117hL"
+					xmlns:q26="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceyeBagliMahalleSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ilceKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceyeBagliMahalleSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IlceyeBagliMahalleSorgulamaResult"
+					nillable="true" type="q27:ServisSonucOfArrayOfMahalle8Zb117hL"
+					xmlns:q27="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IleBagliIlceSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ilKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IleBagliIlceSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IleBagliIlceSorgulamaResult"
+					nillable="true" type="q28:ServisSonucOfArrayOfIlce8Zb117hL"
+					xmlns:q28="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MahalleyeBagliCsbmSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="mahalleKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MahalleyeBagliCsbmSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="MahalleyeBagliCsbmSorgulamaResult"
+					nillable="true" type="q29:ServisSonucOfArrayOfCsbm8Zb117hL"
+					xmlns:q29="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TumIlleriSorgulama">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TumIlleriSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="TumIlleriSorgulamaResult"
+					nillable="true" type="q30:ServisSonucOfArrayOfIl8Zb117hL"
+					xmlns:q30="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceyeBagliBucakSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ilceKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceyeBagliBucakSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IlceyeBagliBucakSorgulamaResult"
+					nillable="true" type="q31:ServisSonucOfArrayOfBucak8Zb117hL"
+					xmlns:q31="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BucagaBagliKoySorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="BucakKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BucagaBagliKoySorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="BucagaBagliKoySorgulamaResult"
+					nillable="true" type="q32:ServisSonucOfArrayOfKoy8Zb117hL"
+					xmlns:q32="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KoyeBagliMahalleSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="koyKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KoyeBagliMahalleSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="KoyeBagliMahalleSorgulamaResult"
+					nillable="true" type="q33:ServisSonucOfArrayOfMahalle8Zb117hL"
+					xmlns:q33="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceBelediyeSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ilceKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IlceBelediyeSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IlceBelediyeSorgulamaResult"
+					nillable="true" type="q34:ServisSonucOfBelediye8Zb117hL"
+					xmlns:q34="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaKoduIleBinaSorgulama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="binaKodu" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaKoduIleBinaSorgulamaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="BinaKoduIleBinaSorgulamaResult"
+					nillable="true" type="q35:ServisSonucOfArrayOfBina8Zb117hL"
+					xmlns:q35="http://schemas.datacontract.org/2004/07/BSTBNET.Shared.Contracts.DataContracts" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

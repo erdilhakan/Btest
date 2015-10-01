@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Lenovo.Lenovo-PC/Desktop/IBstbAsansorDenetimServisTest.svc.wsdl" uri="xml-resources/web-service-references/IBstbAsansorDenetimServisTest.svc/wsdl/IBstbAsansorDenetimServisTest.svc.wsdl"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd_xsd0.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd_xsd0.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd_xsd4.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd_xsd4.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd_xsd1.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd_xsd1.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd_xsd2.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd_xsd2.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd_xsd3.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd_xsd3.xsd"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?wsdl" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.wsdl"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?xsd=xsd0" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.xsd_xsd0.xsd"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?xsd=xsd4" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.xsd_xsd4.xsd"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?xsd=xsd1" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.xsd_xsd1.xsd"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?xsd=xsd2" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.xsd_xsd2.xsd"/>
+    <system systemId="https://asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc?xsd=xsd3" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis/wsdl/asansordenetimtest.sanayi.gov.tr/IBstbAsansorDenetimServis.svc.xsd_xsd3.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.wsdl" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.wsdl"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd0.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd0.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd4.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd4.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd1.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd1.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd2.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd2.xsd"/>
+    <system systemId="file:/D:/SanayiWSDL/TestWSDL/IBstbAsansorDenetimServis.svc.xsd3.xsd" uri="xml-resources/web-service-references/IBstbAsansorDenetimServis.svc/wsdl/IBstbAsansorDenetimServis.svc.xsd3.xsd"/>
+</catalog>
